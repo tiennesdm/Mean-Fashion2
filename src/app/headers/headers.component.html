@@ -1,0 +1,43 @@
+<mat-toolbar>
+    <span routerLink="/">
+       <img src="assets/img/logo.png" class="logo" alt="" >
+      </span>
+  <span>
+    <ul>
+     <!----   <li *ngIf="!userIsAuthenticated" class="desktop">
+            <a  routerLink="/"></a>
+          </li>    -->
+        <li *ngIf="!userIsAuthenticated" class="desktop">
+            <a  routerLink="/men" routerLinkActive="text-primary">Men</a>
+          </li>
+          <li *ngIf="!userIsAuthenticated" class="desktop">
+            <a  routerLink="/women" routerLinkActive="text-success">Women</a>
+          </li>
+          <li  class="desktop">
+              <a >Kids</a>
+            </li>
+            <li  class="desktop">
+                <a >Home & Living </a>
+              </li>
+              <li  class="desktop">
+                  <a >Discover </a>
+                </li>
+    </ul>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="!userIsAuthenticated" class="desktop">
+      <a  routerLink="/login" routerLinkActive="text-info">Login</a>
+    </li>
+    <li *ngIf="userIsAuthenticated" class="desktop">
+      <a  routerLink="/create" routerLinkActive="text-dark">Create</a>
+    </li>
+    <li *ngIf="userIsAuthenticated" class="desktop">
+      <a  routerLink="/list" routerLinkActive="text-danger">List</a>
+    </li>
+    <li *ngIf="userIsAuthenticated" class="desktop">
+      <a   (click)="onLogout()">Logout</a>
+    </li>
+  </ul>
+</mat-toolbar>
+<!----<app-grid></app-grid> -->
